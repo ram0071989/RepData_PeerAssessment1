@@ -88,7 +88,7 @@ print(paste('Total Number of NA rows is', nrow(NAdata), sep=' '))
 ## [1] "Total Number of NA rows is 2304"
 ```
 
-Filling up of the NA values based on averages of the interval
+Filling up of the NA values based on averages of the interval. The strategy used here, is to gather the average for each interval and then use that average to input the missing values. In this case the decimal averages have been rounded off owing to an increase or decrease in the averages. This round off has been done as the number of steps cannot be an integer value
 
 ```r
 newData <- data

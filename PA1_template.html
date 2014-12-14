@@ -269,7 +269,7 @@ print(paste(&#39;Total Number of NA rows is&#39;, nrow(NAdata), sep=&#39; &#39;)
 <pre><code>## [1] &quot;Total Number of NA rows is 2304&quot;
 </code></pre>
 
-<p>Filling up of the NA values based on averages of the interval</p>
+<p>Filling up of the NA values based on averages of the interval. The strategy used here, is to gather the average for each interval and then use that average to input the missing values. In this case the decimal averages have been rounded off owing to an increase or decrease in the averages. This round off has been done as the number of steps cannot be an integer value</p>
 
 <pre><code class="r">newData &lt;- data
 intervals &lt;- unique(NAdata$interval)
